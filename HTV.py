@@ -4,6 +4,7 @@ import time
 from time import sleep
 import win32api, win32con
 
+adCounter = 0
 
 def click(x, y):
     win32api.SetCursorPos((x, y))
@@ -16,8 +17,9 @@ while True:
 
     time.sleep(60 * 30)                                         # Checks for ad every 30 minutes
 
-    if pyautogui.pixel(3668, 1053)[0] == 243:                   # Checks if an ad is avaliable
-        click(3668, 1053)                                       # Ad button
+    if pyautogui.pixel(3668, 1085)[0] == 243:                   # Checks if an ad is avaliable
+        time.sleep(1)
+        click(3668, 1085)                                       # Ad button
         time.sleep(2)
         click(3668, 1000)                                       # Ad content
         time.sleep(2)
@@ -26,6 +28,9 @@ while True:
         click(3500, 753)                                        # Close ad content
         time.sleep(2)
         click(3800, 930)                                        # Collect coins
-        print("Found an ad")                                    # Prints to console to say if an ad was found
+        adCounter+= 1                                           # Adds 1 to the ad counter
+        print("An ad was found")                                # Prints to console to say if an ad was found
+        print("Found " + str(adCounter) + " ads")               # Prints to console how many ads have been found
     else:
         print("No ad found")                                    # Prints to console to say no ad was found
+        print("Found " + str(adCounter) + " ads")               # Prints to console how many ads have been found
