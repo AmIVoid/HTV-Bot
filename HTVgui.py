@@ -148,8 +148,9 @@ class Window(QMainWindow):
             time.sleep(5)
             x1, y1 = pyautogui.position()
             print(x1,y1)
+            time.sleep(0.5)
+            QMessageBox.about(self, "HTV Bot", "Cursor Position Set")
             
-
     def getPos2(self):
             
             global x2
@@ -158,6 +159,9 @@ class Window(QMainWindow):
             time.sleep(5)
             x2, y2 = pyautogui.position()
             print(x2,y2)
+            time.sleep(0.5)
+            QMessageBox.about(self, "HTV Bot", "Cursor Position Set")
+
     def getPos3(self):
 
             global x3
@@ -166,6 +170,8 @@ class Window(QMainWindow):
             time.sleep(5)
             x3, y3 = pyautogui.position()
             print(x3,y3)
+            time.sleep(0.5)
+            QMessageBox.about(self, "HTV Bot", "Cursor Position Set")
 
     def getPos4(self):
 
@@ -175,6 +181,8 @@ class Window(QMainWindow):
             time.sleep(5)
             x4, y4 = pyautogui.position()
             print(x4,y4)
+            time.sleep(0.5)
+            QMessageBox.about(self, "HTV Bot", "Cursor Position Set")
 
     def getPos5(self):
 
@@ -184,6 +192,8 @@ class Window(QMainWindow):
             time.sleep(5)
             x5, y5 = pyautogui.position()
             print(x5,y5)
+            time.sleep(0.5)
+            QMessageBox.about(self, "HTV Bot", "Cursor Position Set")
 
     def startBot(self): 
 
@@ -203,7 +213,7 @@ class Window(QMainWindow):
 
         while self.flag == True:
                 QApplication.processEvents()                                    # Fake Multithreading
-                time.sleep(0.001)
+                time.sleep(0.1)
         
                 if pyautogui.pixel(x1, y1)[0] == 243:                           # Checks if an ad is avaliable
                         click(x1, y1)                                           # Ad button
