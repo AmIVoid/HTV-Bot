@@ -1,4 +1,8 @@
 # HTV Bot
+
+# A better alternative that doesnt suck
+This bot is honestly shit, it was made in like 20 minutes so use a better version made by [WeaveAche](https://github.com/WeaveAche/hanime-auto-coins-collector/) as it doesn't need an emulator to be open and works way better.
+
 ## Now with GUI
 A quick and dirty python bot to automate collecting coins in the HAnime.tv android app.
 
